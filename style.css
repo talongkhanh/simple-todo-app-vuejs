@@ -43,6 +43,14 @@ li {
 
 .text {
 	flex: 1;
+	height: 40px;
+	margin-right: 14px;
+	line-height: 40px;
+}
+.text:focus {
+	outline: 1px solid #4eb983;
+	box-shadow: inset 0 0 3px #4eb983;
+	color: #4eb983
 }
 
 .check {
@@ -53,11 +61,12 @@ li {
 	background: #fff;
 	border: 1px solid #4eb983;
 	border-radius: 2px;
-	font-size: 25px;
+	font-size: 22px;
 	cursor: pointer;
 	color: #4eb983;
 	transition: 0.6s;
 	outline: none;
+	height: 40px;
 }
 
 .delete:hover {

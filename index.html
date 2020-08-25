@@ -14,8 +14,10 @@
 		<ul>
 			<li v-for='todo in todos' :key='todo.id'>
 				<input @change='toggle(todo)' :checked='todo.done' class="check" type="checkbox">
-				<del v-if='todo.done' class="text">{{ todo.text }}</del>
-				<span v-else class="text">{{ todo.text }}</span>
+				<del :data-id='todo.id' v-if='todo.done' class="text" @blur='editTodo' contenteditable="true">
+					{{ todo.text }}
+				</del>
+				<span :data-id='todo.id' v-else class="text" @blur='editTodo' contenteditable="true">{{ todo.text }}</span>
 				<button class="delete" @click='deleteTodo(todo.id)'>Del</button>
 			</li>
 		</ul>
