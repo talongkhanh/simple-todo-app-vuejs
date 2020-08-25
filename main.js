@@ -1,4 +1,4 @@
-new Vue({
+const app = new Vue({
 	el: '#app',
 	data: {
 		todos: [
@@ -13,6 +13,9 @@ new Vue({
 		},
 		deleteTodo(id) {
 			this.todos = this.todos.filter((todo) => todo.id != id)
+		},
+		addTodo(e) {
+			console.log(uniqid());
 		}
 	},
 });
