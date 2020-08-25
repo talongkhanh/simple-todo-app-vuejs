@@ -57,6 +57,7 @@ li {
 	cursor: pointer;
 	color: #4eb983;
 	transition: 0.6s;
+	outline: none;
 }
 
 .delete:hover {
@@ -66,4 +67,8 @@ li {
 
 .check {
 	zoom: 1.8;
+}
+
+del {
+	color: #4eb983;
 }

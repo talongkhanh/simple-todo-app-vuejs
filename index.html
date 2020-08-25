@@ -12,10 +12,11 @@
 		<h1 class="heading">Simple Todolist</h1>
 		<input class="new-todo" type="text" placeholder="Enter new todo.....">
 		<ul>
-			<li>
-				<input class="check" type="checkbox">
-				<span class="text">Lorem ipsum, dolor.</span>
-				<button class="delete">Del</button>
+			<li v-for='todo in todos' :key='todo.id'>
+				<input @change='toggle(todo)' :checked='todo.done' class="check" type="checkbox">
+				<del v-if='todo.done' class="text">{{ todo.text }}</del>
+				<span v-else class="text">{{ todo.text }}</span>
+				<button class="delete" @click='deleteTodo(todo.id)'>Del</button>
 			</li>
 		</ul>
 	</div>
