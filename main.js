@@ -15,7 +15,12 @@ const app = new Vue({
 			this.todos = this.todos.filter((todo) => todo.id != id)
 		},
 		addTodo(e) {
-			console.log(uniqid());
+			let id = Math.ceil(Math.random() * 99999999);
+			let text = e.target.value;
+			let done = false;
+			let newTodo = { id, text, done };
+			this.todos.push(newTodo);
+			e.target.value = '';
 		}
 	},
 });
